@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>Adicionar novo tópico</title>
+	</head>
+	<body>
+		<div>
+			 <h1>Adicionar novo tópico</h1>
+			 
+			 
+			 <form style="margin-top:9%" action="#" th:action="@{/saveTopic}" th:object="${newtopic}" method="POST">
+			
+				<input type="text" th:field="*{nome_topico}" placeholder="Nome" style="margin-top:7%; margin-bottom: 2%" rows="40" class="inputType">				 
+				<button type="submit" style="width:20%;margin-left:30%" class="button-85">Adicionar tópico</button>
+				<a th:href="@{/loadProdutorPage}" ><button type="button" style="width:20%;" class="button-85">Voltar atrás</button></a>
+			 </form>
+			 
+			
+			
+		</div>
+	</body>
+	
+	
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+	
+	
+		h1{
+			text-align:center;
+		}
+	
+	
+		body {
+			background-image: url("https://wallpaperaccess.com/full/115103.jpg");
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+	
+		.mainTitle {
+			text-align: center;
+			font-family: 'Ubuntu', sans-serif;
+			color: white;
+			text-shadow: 2px 2px 2px black;
+		}
+		
+		.subTitle {
+			text-align: center;
+			font-family: 'Ubuntu', sans-serif;
+			color: white;
+			text-shadow: 2px 2px 2px black;
+			font-size: 19px;
+		}
+		
+		
+	
+		.main_div {
+			height: 750px;
+			margin: auto;
+			margin-top:7%;
+  			width: 40%;
+			
+		}
+		
+	
+		
+
+		
+	     .inputType {
+		 	border: 2px solid white;
+		    width: 60%;
+		    padding: 8px;
+		    margin: auto;
+		    margin-left: 20%;
+		    margin-top: 8px;
+		    font-size: 1rem;
+		    color: #07b2bb;
+		    text-align: center;
+		    font-family: 'Ubuntu', sans-serif;
+		   border-radius: 15px 50px 30px  ;
+	     }
+	     
+	     textarea {
+	     	height: 250px;
+	     }
+	     
+	     input {
+	     	height: 40px;
+     	 }
+     	 
+     	 select {
+     	    font: inherit;
+     	 	height: 100%;
+     	 	box-sizing:content-box;
+     	 }
+     	 
+     	 .dropdown {
+     	 	height: 40px;
+     	 	margin-bottom: 28px;
+     	 	
+     	 }
+	     
+	     
+		
+		.regTitle {
+			color: #FFFFFF; 
+			font-family: 'Ubuntu', sans-serif;
+			font-size: 20px; 
+			text-shadow: 1px 1px 1px black;
+		}
+		
+		.regHL {
+			color: #6958bb; 
+			font-family: 'Ubuntu', sans-serif;
+			font-weigth: 700;
+			font-size: 20px; 
+			text-shadow: 1px 1px 1px black;
+		}
+		
+		.button-85 {
+		  padding: 0.6em 2em;
+		  border: none;
+		  outline: none;
+		  color: rgb(255, 255, 255);
+		  background: #111;
+		  cursor: pointer;
+		  position: relative;
+		  z-index: 0;
+		  border-radius: 10px;
+		  user-select: none;
+		  -webkit-user-select: none;
+		  touch-action: manipulation;
+		  width: 47%;
+		  height: 80px;
+		  margin-top: 20px;
+		  text-align: center;
+		  font-family: 'Ubuntu', sans-serif;
+		  color: white;
+		  font-size: 20px;
+		  text-shadow: 2px 2px 2px black;
+		  margin-right: 20px;
+		}
+
+	.button-85:before {
+	  content: "";
+	  background: linear-gradient(
+	    45deg,
+	    #ff0000,
+	    #ff7300,
+	    #fffb00,
+	    #48ff00,
+	    #00ffd5,
+	    #002bff,
+	    #7a00ff,
+	    #ff00c8,
+	    #ff0000
+	  );
+	  position: absolute;
+	  top: -2px;
+	  left: -2px;
+	  background-size: 400%;
+	  z-index: -1;
+	  filter: blur(5px);
+	  -webkit-filter: blur(5px);
+	  width: calc(100% + 4px);
+	  height: calc(100% + 4px);
+	  animation: glowing-button-85 20s linear infinite;
+	  transition: opacity 0.3s ease-in-out;
+	  border-radius: 10px;
+	}
+	
+	@keyframes glowing-button-85 {
+	  0% {
+	    background-position: 0 0;
+	  }
+	  50% {
+	    background-position: 400% 0;
+	  }
+	  100% {
+	    background-position: 0 0;
+	  }
+	}
+	
+	.button-85:after {
+	  z-index: -1;
+	  content: "";
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  background: #222;
+	  left: 0;
+	  top: 0;
+	  border-radius: 10px;
+	}
+	</style>
+	
+</html>
